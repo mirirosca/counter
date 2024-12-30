@@ -1,6 +1,7 @@
 # Counter App
 
 This project is a simple **Counter** application built using HTML, CSS, and JavaScript. It provides basic counter functionality with the ability to increase, decrease, and reset the counter value using dynamically created DOM elements.
+You can try the live version of the application here: [Counter App](https://counter-prj.netlify.app)
 
 ## Features
 
@@ -19,12 +20,17 @@ This project is a simple **Counter** application built using HTML, CSS, and Java
 ## Project Structure
 
 ```plaintext
-.
-├── css/
-│   └── style.css        # Styling for the counter
-├── js/
-│   └── app.js           # JavaScript logic for the counter
-└── index.html           # Main HTML file
+│
+├── /css
+│   └── style.css
+│
+├── /js
+│   └── app.js
+│
+├── .gitignore 
+├── LICENSE         
+├── README.md  
+├── index.html
 ```
 
 ## Installation
