@@ -21,16 +21,19 @@ You can try the live version of the application here: [Counter App](https://coun
 
 ```plaintext
 │
-├── /css
-│   └── style.css
-│
-├── /js
-│   └── app.js
+├── /assets
+│   ├── /css
+│   │   └── style.css
+│   ├── /js
+│   │   └── app.js
+│   └── /images
+│       └── [your_image.png]
 │
 ├── .gitignore 
 ├── LICENSE         
 ├── README.md  
 ├── index.html
+
 ```
 
 ## Installation
@@ -55,17 +58,24 @@ You can try the live version of the application here: [Counter App](https://coun
 
 ## JavaScript Implementation
 
+Here’s the updated section of your README to reflect the modified JavaScript code:
+
+---
+
+## JavaScript Implementation
+
 The core functionality of the counter is built using JavaScript by:
-1. Creating the elements (`label`, `buttons`) dynamically.
-2. Appending the elements to the DOM with `appendChild`.
-3. Using event listeners (`addEventListener`) to handle button clicks and update the counter value.
+1. Dynamically creating the elements (`label`, `buttons`) with a reusable function that accepts `tag`, `id`, and `textContent`.
+2. Appending the elements to the DOM using `appendChild` and `insertBefore`.
+3. Implementing **event delegation** to handle button clicks more efficiently.
 
-Here's a brief explanation of how the counter works:
+### How the counter works:
+- The **counter value** is initialized at `0` and displayed in a dynamically created label.
+- The counter **label** is updated each time a button is clicked (increase, decrease, or reset).
+- Instead of adding individual event listeners to each button, the **event delegation** approach is used. A single event listener is attached to the parent `counterController`, and button clicks are detected by checking the `id` of the clicked button.
+- Based on the button clicked, the `counterValue` is modified and the updated value is displayed.
 
-- The **counter value** is initialized at `0`.
-- The **counter label** is updated each time one of the buttons is clicked (increase, decrease, or reset).
-- Event listeners on the buttons adjust the `counterValue` variable and update the DOM with the new value.
-
+--- 
 
 ## License
 
